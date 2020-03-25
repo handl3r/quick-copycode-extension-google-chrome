@@ -1,0 +1,18 @@
+{
+  "name": "Quickcopy Stackoverflow",
+  "version": "1.0",
+  "description": "Quick copy code on stackoverflow by ThaiBuiXuan",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://stackoverflow.com/*"],
+      "js": ["contentscript.js"]
+    }
+  ],
+  "web_accessible_resources": ["script.js"],
+  "permissions": ["https://stackoverflow.com/*", "activeTab"],
+  "manifest_version": 2
+}
